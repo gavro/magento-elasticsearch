@@ -220,13 +220,14 @@ class Bubble_Search_Model_Resource_Engine_Elasticsearch extends Bubble_Search_Mo
     /**
      * Escapes specified value.
      *
-     * @link http://lucene.apache.org/core/3_6_0/queryparsersyntax.html
+     * @link http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#_reserved_characters
      * @param string $value
      * @return mixed
      */
     protected function _escape($value)
     {
-        $pattern = '/(\+|-|&&|\|\||!|\(|\)|\{|}|\[|]|\^|"|~|\*|\?|:|\\\)/';
+        // + - && || ! ( ) { } [ ] ^ " ~ * ? : \ /
+        $pattern = '_([+!(){}[\]^"~*?:\/-]|&&|\|\|)_';
         $replace = '\\\$1';
 
         return preg_replace($pattern, $replace, $value);
