@@ -1,8 +1,8 @@
-## Magento extension for boosting search results using Elasticsearch (0.20.x only)
+## Magento extension for boosting search results using Elasticsearch
 
-For the latest version of Elasticsearch (0.90.x based on Lucene 4), there is a paid extension available [here](http://shop.bubblecode.net/magento-elasticsearch.html)
+This is an updated module (based on [baranga's fork](https://github.com/baranga/magento-elasticsearch) of the [original code](https://github.com/jreinke/magento-elasticsearch)). There has been no extensive testing; basic search- and indexing functionality has been found to be working in combination with Elastichsearch v1.2.1.
 
-[![Build Status](https://secure.travis-ci.org/jreinke/magento-elasticsearch.png?branch=master)](http://travis-ci.org/jreinke/magento-elasticsearch)
+[![Build Status](https://secure.travis-ci.org/gavro/magento-elasticsearch.png?branch=master)](http://travis-ci.org/gavro/magento-elasticsearch)
 
 ![Magento Elasticsearch](http://i.imgur.com/X6quR.png)
 
@@ -14,11 +14,11 @@ Install with [modgit](https://github.com/jreinke/modgit):
 
     $ cd /path/to/magento
     $ modgit init
-    $ modgit clone elasticsearch https://github.com/jreinke/magento-elasticsearch.git
+    $ modgit clone elasticsearch https://github.com/gavro/magento-elasticsearch.git
 
 or download package manually:
 
-* Download latest version [here](https://github.com/jreinke/magento-elasticsearch/archive/master.zip)
+* Download latest version [here](https://github.com/gavro/magento-elasticsearch/archive/master.zip)
 * Unzip in Magento root folder
 * Clean cache
 
