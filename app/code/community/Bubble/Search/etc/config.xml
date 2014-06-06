@@ -44,6 +44,14 @@
             </bubble_search_setup>
         </resources>
         <events>
+            <core_collection_abstract_load_before>
+                <observers>
+                    <bubble_search_autoloader>
+                        <class>bubble_search/autoloader</class>
+                        <method>addAutoloader</method>
+                    </bubble_search_autoloader>
+                </observers>
+            </core_collection_abstract_load_before>
             <catalogsearch_index_process_start>
                 <observers>
                     <bubble_search>
